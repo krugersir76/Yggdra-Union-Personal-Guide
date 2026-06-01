@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
 
 body {
   margin: 0;
 }
 
-.logo {
+.logo {  
+  position: sticky;
+  top: 0;
+  width: 100%;
   background-color: #121A72;
   border-bottom: 3px solid white;
   padding: 5px;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index:50;
  
 }
-
-
-
+    
+.logo a:hover {
+  background-color: white;
+    }
+    
+.logo img {
+  position: relative;
+}
+.logo p {
+  position: relative;
+}
+    
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 140px;
   width: 100%;
   background-color: #121A72;
   overflow-x: auto;
   white-space: nowrap;
-  
+  z-index:49;
 }
 
 .navbar a {
@@ -34,10 +47,20 @@ body {
   padding: 20px;
   display: inline-block;
   text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.content {
-  margin-top: 260px;
+ .navbar a:hover {
+  background-color: white;
+  color: black;
+   
+ }
+.battlefieldimg {
+
+  
+}
+.text {
   padding: 20px;
 }
 
@@ -45,7 +68,7 @@ body {
 </head>
 
 <body style="background-image:url('../Images/bg.png');background-size:cover;background-repeat:no-repeat;">
-  <div class="logo" style="position:relative; text-align:center">
+  <div class="logo" style="text-align:center">
     
   <img src="../Images/Ygg.png" width="307px" height="125px" style="position:absolute;left:120px;">
   <img src="../Images/Logo.png" width="488px" height="125px">
@@ -108,10 +131,24 @@ body {
   <a href="B50.html">B-50</a>
 
   </div>
-  <div class="content">
-  <h1>Battle Field - 5</h1>
+  
+  <div class="text">
+  <h1 style = "text-align:center;font-family:'Playfair Display';">Battle Field - 5</h1>
+  </div>
+  
+  <div style = "text-align:center; position:relative; z-index:1;">
+  <img src="../Images/map/B5.png" style="width:900px; height:400px; object-fit:cover; object-position: top; margin-top: 3px;">
+  <h1 style = "text-align:left;">
+  <span style = "margin-left:250px;"> FULL MAP </span>
+  <span style = "margin-left:550px;"> ITEMS </span>
+  </h1>
+  <img src="../Images/tile/Btile5.jpg" style = "display:block; 
+    margin-left:0; width:600px; height:400px; margin-left:50px;">
 
-</div>
+  <h2 style = "position:absolute; top:500px; left:700px;">No items</h2>
 
+  </div>
+
+  
 </body>
 </html>
